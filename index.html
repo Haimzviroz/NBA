@@ -7,5 +7,80 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>NBA Fantasy 2014 - 2024</h1>
+    </header>
+    <main>
+      <h2>my fantasty team</h2>
+      <div class="cards">
+        <div id="point-guard" class="card">
+          <h3>point-guard</h3>
+        </div>
+        <div id="shooting-guard" class="card">
+          <h3>shooting-guard</h3>
+        </div>
+        <div id="small-forward" class="card">
+          <h3>small-forward</h3>
+        </div>
+        <div id="power-forward" class="card">
+          <h3>power-forward</h3>
+        </div>
+        <div id="center" class="card">
+          <h3>center</h3>
+        </div>
+      </div>
+      <div class="container">
+        <form>
+          <select id="position-input" name="position">
+            <option value="PG">PG</option>
+            <option value="SG">SG</option>
+            <option value="SF">SF</option>
+            <option value="PF">PF</option>
+            <option value="C">C</option>
+          </select>
+          <input
+            type="range"
+            id="points-input"
+            name="points"
+            min="0"
+            max="20000"
+            onchange="updateTextInput(this.value,'lbl-points')"
+          />
+          <label for="points-input" id="lbl-points"></label>
+          <input
+            type="range"
+            id="two-percent-input"
+            name="two-percent"
+            onchange="updateTextInput(this.value,'lbl-two')"
+          />
+          <label for="two-percent-input" id="lbl-two"></label>
+          <input
+            type="range"
+            id="three-percent-input"
+            name="three-percent"
+            onchange="updateTextInput(this.value,'lbl-three')"
+          />
+          <label for="three-percent-input" id="lbl-three"></label>
+
+          <button type="submit">Search Player</button>
+        </form>
+        <table>
+          <table style="width: 100%">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Position</th>
+                <th>Points</th>
+                <th>Fg%</th>
+                <th>3p%</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </table>
+      </div>
+    </main>
+  </body>
 </html>
